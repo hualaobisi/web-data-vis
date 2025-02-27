@@ -1,9 +1,16 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+font_path = 'font/SimHei.ttf'
+# 添加本地字体到字体管理器
+fm.fontManager.addfont(font_path)
 
 # 设置中文字体
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体
+# 获取字体名称
+font_name = fm.FontProperties(fname=font_path).get_name()
+plt.rcParams['font.sans-serif'] = [font_name]  # 使用黑体
 plt.rcParams['axes.unicode_minus'] = False
 
 # 设置网页标题
