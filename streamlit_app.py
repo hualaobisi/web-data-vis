@@ -33,7 +33,7 @@ if uploaded_files:
         
         # 将第一列的列名赋给第二列的列名，然后将第一列的列名重命名为“时间”
 
-        df.columns =  (['时间'] + list(df.columns))[:len(df.columns)]
+        # df.columns =  (['时间'] + list(df.columns))[:len(df.columns)]
         # df.rename(columns={df.columns[1]: second_column_name}, inplace=True)
 
         # 对“时间”列进行时间化处理
